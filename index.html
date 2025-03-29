@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -12,25 +12,17 @@
         <p>Explore our collection of adorable cat images stored on Azure</p>
     </header>
 
-    <section class="carousel-container">
-        <!-- Main image -->
-        <div id="main-image" class="main-image-container">
-            <img src="" alt="Main Image" id="main-img">
-        </div>
-
-        <!-- Thumbnail images -->
-        <div id="thumbnail-container" class="thumbnail-container">
-            <!-- Thumbnails will be dynamically loaded here -->
-        </div>
-
-        <!-- Navigation buttons -->
-        <button id="prev" class="nav-button">&#10094;</button>
-        <button id="next" class="nav-button">&#10095;</button>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Cat Gallery. All Rights Reserved.</p>
-    </footer>
+    <main>
+        <section class="carousel next">
+            <div class="list">
+                <!-- Dynamic images will be loaded here -->
+            </div>
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+        </section>
+    </main>
 
     <script src="app.js"></script>
 </body>
