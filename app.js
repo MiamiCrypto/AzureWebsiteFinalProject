@@ -10,29 +10,52 @@ const imageFiles = [
 // Base URL of your Azure Blob Storage container
 const baseUrl = 'https://storageforfinalproject.blob.core.windows.net/catimages/';
 
-// Function to dynamically load and display images from Azure Blob Storage
+let currentIndex = 0;
+
+// Function to dynamically load and display images in the carousel
 function loadCatImages() {
-    const imagesContainer = document.getElementById('cat-images-container');
-    
-    imageFiles.forEach(imageFile => {
-        // Construct the full URL for each image
-        const imageUrl = `${baseUrl}${imageFile}`;
-        console.log(`Loading image: ${imageUrl}`); // Debugging log to check the generated URL
+    const listContainer = document.querySelector('.carousel .list');
 
-        // Create an image element and set its source to the image URL
-        const imgElement = document.createElement('img');
-        imgElement.src = imageUrl; // Setting the image source
-        imgElement.alt = `Cat Image ${imageFile}`; // Alt text for the image
+    // Clear the list before adding images
+    listContainer.innerHTML = '';
 
-        // Create a div to wrap each image and apply styling (you can customize the styling further)
-        const imageCard = document.createElement('div');
-        imageCard.classList.add('image-card');
-        imageCard.appendChild(imgElement);
+    imageFiles.forEach((imageFile, index) => {
+        const item = document.createElement('article');
+        item.classList.add('item');
+        if (index === currentIndex) item.classList.add('active');
 
-        // Append the image card to the container in the DOM
-        imagesContainer.appendChild(imageCard);
+        const imageContainer = document.createElement('div');
+        imageContainer.classList.add('image');
+        const img = document.createElement('img');
+        img.src = `${baseUrl}${imageFile}`;
+        img.alt = `Cat Image ${imageFile}`;
+
+        imageContainer.appendChild(img);
+        item.appendChild(imageContainer);
+        listContainer.appendChild(item);
     });
+
+    updateSlider();
 }
 
-// Ensure the images are loaded when the page is ready
+// Function to handle the slider transitions
+function updateSlider() {
+    const items = document.querySelectorAll('.carousel .item');
+    items.forEach(item => item.classList.remove('active'));
+
+    items[currentIndex].classList.add('active');
+}
+
+// Function for next and previous button functionality
+document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % imageFiles.length;
+    loadCatImages();
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + imageFiles.length) % imageFiles.length;
+    loadCatImages();
+});
+
+// Initialize the slider with the first image
 window.onload = loadCatImages;
