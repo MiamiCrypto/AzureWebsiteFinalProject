@@ -57,5 +57,5 @@ document.getElementById('prev').addEventListener('click', () => {
     loadCatImages();
 });
 
-// Initialize the slider with the first image
+// Initialize the image slider with the first image
 window.onload = loadCatImages;
