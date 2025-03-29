@@ -1,29 +1,33 @@
-// Array of image filenames (you could also fetch this list from an API if dynamic)
+// Array of image filenames stored in Azure Blob Storage
 const imageFiles = [
-    'image1.jpg', 
-    'image2.jpg', 
-    'image3.jpg'
+    'Cat1.png',
+    'Cat2.png',
+    'Cat3.png',
+    'Cat4.png',
+    'Cat5.png'
 ];
 
-const baseUrl = 'https://raw.githubusercontent.com/yourusername/your-repo/main/cat-images/'; // GitHub raw URL
+// Base URL of your Azure Blob Storage
+const baseUrl = 'https://<your-storage-account-name>.blob.core.windows.net/catimages/';
 
-// Function to dynamically display images
+// Function to dynamically load and display images from Azure Blob Storage
 function loadCatImages() {
     const imagesContainer = document.getElementById('cat-images-container');
     
     imageFiles.forEach(imageFile => {
         const imgElement = document.createElement('img');
-        imgElement.src = `${baseUrl}${imageFile}`;
-        imgElement.alt = `Cat Image ${imageFile}`;
-        
-        // Add image to a styled card
+        imgElement.src = `${baseUrl}${imageFile}`; // Constructing the full URL to the image
+        imgElement.alt = `Cat Image ${imageFile}`; // Alt text for the image
+
+        // Create a div to wrap each image and apply styling (you can customize the styling further)
         const imageCard = document.createElement('div');
         imageCard.classList.add('image-card');
         imageCard.appendChild(imgElement);
 
+        // Append the image card to the container in the DOM
         imagesContainer.appendChild(imageCard);
     });
 }
 
-// Call function to load images on page load
+// Ensure the images are loaded when the page is ready
 window.onload = loadCatImages;
