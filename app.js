@@ -1,21 +1,23 @@
-let currentIndex = 0;
+let currentSlide = 0;
 
-function moveSlide(step) {
+function showSlide(index) {
   const slides = document.querySelectorAll('.carousel-item');
-  const totalSlides = slides.length;
-  
-  currentIndex = (currentIndex + step + totalSlides) % totalSlides;
-
-  for (let i = 0; i < totalSlides; i++) {
-    slides[i].style.display = 'none';
+  if (index >= slides.length) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = index;
   }
-  
-  slides[currentIndex].style.display = 'grid';
+  slides.forEach((slide, i) => {
+    slide.style.display = i === currentSlide ? 'block' : 'none';
+  });
 }
 
-// Initialize the carousel
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll('.carousel-item');
-  slides.forEach(slide => slide.style.display = 'none');
-  slides[currentIndex].style.display = 'grid';
+function moveSlide(step) {
+  showSlide(currentSlide + step);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  showSlide(currentSlide);
 });
