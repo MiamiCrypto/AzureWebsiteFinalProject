@@ -1,102 +1,38 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Hero Section Styles */
+/* Hero Section */
 .hero {
-  background-image: url('https://storageforfinalproject.blob.core.windows.net/catimages/Cat1.png'); /* Or a different background image */
+  position: relative;
+  height: 50vh; /* Sets the hero image section to 50% of the viewport height */
+  background-image: url('https://storageforfinalproject.blob.core.windows.net/catimages/robotcatlogo.png'); /* Your image URL */
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 20px;
-  position: relative;
-  flex-direction: column;
-}
-
-.hero-content {
-  max-width: 800px;
-  text-align: center;
+  overflow: hidden;
 }
 
 .hero h1 {
-  font-size: 4em;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.hero .description {
-  font-size: 1.5em;
-  margin-bottom: 30px;
-  font-style: italic;
-}
-
-.cta-btn {
-  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  text-decoration: none;
-  padding: 15px 30px;
-  font-size: 1.2em;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-btn:hover {
-  background-color: #555;
-}
-
-/* Logo */
-.logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-/* Gallery Styles */
-.gallery-container {
+  font-size: 3em;
   text-align: center;
-  width: 90%;
-  max-width: 1000px;
-  margin: 50px auto;
+  z-index: 10; /* Ensures the title stays above the image */
 }
 
-.carousel {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  margin-top: 20px;
+/* Adding a blurred effect to the background */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better contrast */
+  backdrop-filter: blur(10px); /* Blur effect */
+  z-index: 1; /* Ensures the overlay stays below the text */
 }
 
-.carousel-item {
-  display: none;
-  flex: 0 0 100%;
-  text-align: center;
-}
-
-.carousel-item img {
-  max-width: 80%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel-item img:hover {
-  transform: scale(1.05);
-}
-
-.carousel-item p {
-  margin-top: 10px;
-  font-size: 1.2em;
-  font-style: italic;
-}
-
+/* Buttons Styling */
 button {
   background-color: #333;
   color: white;
@@ -106,7 +42,9 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
+  z-index: 20;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 button:hover {
@@ -114,28 +52,39 @@ button:hover {
 }
 
 .prev {
-  left: 20px;
+  left: 10px;
 }
 
 .next {
-  right: 20px;
+  right: 10px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero .description {
-    font-size: 1em;
-  }
-
-  .carousel-item img {
-    max-width: 90%;
-  }
+/* Carousel Container */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
 }
 
+.carousel-item {
+  display: none;
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.carousel-item img {
+  max-width: 60%; /* Ensures the image doesn't overflow and is responsive */
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel-item p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  font-style: italic;
+}
 
 /* body {
   font-family: 'Arial', sans-serif;
