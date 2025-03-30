@@ -10,12 +10,12 @@ function moveSlide(step) {
     slides[i].style.display = 'none';
   }
   
-  slides[currentIndex].style.display = 'block';
+  slides[currentIndex].style.display = 'grid';
 }
 
 // Initialize the carousel
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll('.carousel-item');
   slides.forEach(slide => slide.style.display = 'none');
-  slides[currentIndex].style.display = 'block';
+  slides[currentIndex].style.display = 'grid';
 });
