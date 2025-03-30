@@ -10,7 +10,9 @@
   <div class="container">
     <h1>Cat Image Gallery</h1>
     <p>This is a fluffy cat, known for its thick fur and playful nature.</p>
+
     <div class="carousel">
+      <!-- Carousel Items -->
       <div class="carousel-item">
         <img src="https://storageforfinalproject.blob.core.windows.net/catimages/Cat1.png" alt="Cat 1">
         <p class="description">This is a sleek and elegant cat, often seen lounging in sunny spots.</p>
@@ -24,6 +26,14 @@
         <p class="description">This cat is known for its energetic nature and love for adventure.</p>
       </div>
     </div>
+
+    <!-- Controls -->
+    <div class="carousel-controls">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
   </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
