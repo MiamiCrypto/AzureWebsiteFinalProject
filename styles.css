@@ -20,6 +20,13 @@ h1 {
   color: #333;
 }
 
+.description {
+  font-size: 1.2em;
+  color: #555;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
 .carousel {
   display: flex;
   justify-content: center;
@@ -34,7 +41,7 @@ h1 {
 }
 
 .carousel-item img {
-  max-width: 100%;
+  max-width: 90%; /* Ensures the image doesn't overflow and is responsive */
   height: auto;
   border-radius: 10px;
 }
