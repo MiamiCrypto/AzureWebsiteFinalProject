@@ -66,7 +66,7 @@ h1 {
 .carousel {
   display: flex;
   overflow: hidden;
-  width: 80%;
+  width: 60%;
   justify-content: center;
   align-items: center;
 }
