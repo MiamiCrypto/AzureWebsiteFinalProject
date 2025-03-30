@@ -7,16 +7,15 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <img src="https://storageforfinalproject.blob.core.windows.net/catimages/robotcatlogo.png" alt="Logo" class="logo">
-      <h1>Cat Image Gallery</h1>
-      <p class="description">Explore a unique collection of robotic cat illustrations, where futuristic design meets feline charm.</p>
-      <a href="#gallery" class="cta-btn">Explore Gallery</a>
-    </div>
-  </header>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Cat Image Gallery</h1>
+  </div>
 
-  <div class="gallery-container" id="gallery">
+  <!-- Gallery Content -->
+  <div class="gallery-container">
+    <p class="description">Explore a unique collection of robotic cat illustrations, where futuristic design meets feline charm.</p> <!-- Added description -->
+    
     <div class="carousel">
       <div class="carousel-item">
         <img src="https://storageforfinalproject.blob.core.windows.net/catimages/Cat1.png" alt="Cat 1">
@@ -39,6 +38,8 @@
         <p>Mirror Reflection’ tells the heartwarming story of a robot cat named 'Pixi,' designed with artificial intelligence that allows for self-awareness. The scene shows Pixi standing before a mirror, gazing at its own reflection. Unlike most machines, Pixi is designed to experience a range of emotions, including wonder and curiosity. The worn, vintage mirror creates a juxtaposition against Pixi's sleek robotic design, hinting at the passage of time and the evolution of technology. This tender moment highlights the merging of the organic and synthetic, as Pixi contemplates its existence and role in the world. The image evokes questions about identity, self-awareness, and the potential for AI to evolve beyond its programming.</p>
       </div>
     </div>
+
+    <!-- Navigation Buttons -->
     <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
     <button class="next" onclick="moveSlide(1)">&#10095;</button>
   </div>
@@ -46,7 +47,6 @@
   <script src="app.js"></script>
 </body>
 </html>
-
 
 
 
