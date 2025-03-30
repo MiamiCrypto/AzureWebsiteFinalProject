@@ -3,44 +3,72 @@ body {
   background-color: #e5f2f3;
   color: #333;
   margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 .hero {
   position: relative;
-  height: 50vh; /* Adjusts the hero section to half the height */
-  background-image: url('https://storageforfinalproject.blob.core.windows.net/catimages/robotcatlogo.png');
+  background-image: url('https://storageforfinalproject.blob.core.windows.net/catimages/Cat1.png');
   background-size: cover;
   background-position: center;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  filter: blur(8px); /* Blurs the background */
+  position: relative;
 }
 
 .hero-content {
-  z-index: 2;
-  color: #fff;
+  z-index: 1;
 }
 
-.hero h1 {
-  font-size: 3rem;
+.logo {
+  width: 80px;
   margin-bottom: 10px;
 }
 
-.hero .description {
-  font-size: 1.2rem;
+h1 {
+  font-size: 2.5em;
+  color: white;
+  margin: 0;
+}
+
+.description {
+  font-size: 1.2em;
+  color: white;
+  margin-top: 10px;
+}
+
+.explore-btn {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+}
+
+.explore-btn:hover {
+  background-color: #555;
 }
 
 .carousel-container {
-  position: relative;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
 
 .carousel {
   display: flex;
-  justify-content: center;
   overflow: hidden;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-item {
@@ -50,9 +78,17 @@ body {
 }
 
 .carousel-item img {
-  max-width: 60%; /* Adjusts the image size to 60% of original size */
+  max-width: 60%; /* Reduces the image size */
   height: auto;
   border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.carousel-item p {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-top: 10px;
 }
 
 button {
@@ -61,20 +97,4 @@ button {
   border: none;
   padding: 10px;
   cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-}
-
-button:hover {
-  background-color: #555;
-}
-
-.prev {
-  left: 10%;
-}
-
-.next {
-  right: 10%;
-}
+  position
