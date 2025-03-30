@@ -1,20 +1,21 @@
 let currentIndex = 0;
 
-const slides = document.querySelectorAll('.carousel-item');
-
 function moveSlide(step) {
-    currentIndex += step;
-    if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
-    } else if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    }
-    updateCarousel();
+  const slides = document.querySelectorAll('.carousel-item');
+  const totalSlides = slides.length;
+  
+  currentIndex = (currentIndex + step + totalSlides) % totalSlides;
+
+  for (let i = 0; i < totalSlides; i++) {
+    slides[i].style.display = 'none';
+  }
+  
+  slides[currentIndex].style.display = 'block';
 }
 
-function updateCarousel() {
-    const offset = -currentIndex * 100;
-    slides.forEach((slide) => {
-        slide.style.transform = `translateX(${offset}%)`;
-    });
-}
+// Initialize the carousel
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll('.carousel-item');
+  slides.forEach(slide => slide.style.display = 'none');
+  slides[currentIndex].style.display = 'block';
+});
