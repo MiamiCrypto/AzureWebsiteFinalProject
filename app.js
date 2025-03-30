@@ -1,23 +1,19 @@
-let currentSlide = 0;
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
 
-function showSlide(index) {
-  const slides = document.querySelectorAll('.carousel-item');
-  if (index >= slides.length) {
-    currentSlide = 0;
-  } else if (index < 0) {
-    currentSlide = slides.length - 1;
-  } else {
-    currentSlide = index;
-  }
-  slides.forEach((slide, i) => {
-    slide.style.display = i === currentSlide ? 'block' : 'none';
-  });
+function showItem(index) {
+  // Hide all items
+  items.forEach(item => item.style.display = 'none');
+  // Show the current item
+  items[index].style.display = 'block';
 }
 
 function moveSlide(step) {
-  showSlide(currentSlide + step);
+  // Calculate the new index
+  currentIndex = (currentIndex + step + totalItems) % totalItems;
+  showItem(currentIndex);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  showSlide(currentSlide);
-});
+// Initialize the carousel by showing the first item
+showItem(currentIndex);
