@@ -1,87 +1,39 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa;
 }
 
-/* Centering the carousel */
-.carousel-container {
-    width: 80%;
-    max-width: 1000px;
-    text-align: center;
-    position: relative;
+.container {
+  text-align: center;
+  padding: 20px;
 }
 
-/* Carousel Styling */
+h1 {
+  font-size: 36px;
+  color: #2c3e50;
+}
+
 .carousel {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .carousel-item {
-    min-width: 100%;
-    transition: transform 0.5s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 20px 0;
 }
 
 .carousel-item img {
-    max-width: 100%;
-    max-height: 500px;
-    border-radius: 8px;
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Styling for the descriptions */
-.image-description {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: 16px;
-    width: 80%;
-}
-
-/* Navigation buttons */
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.description {
+  font-size: 18px;
+  color: #34495e;
+  margin-top: 10px;
 }
