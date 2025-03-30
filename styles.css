@@ -25,7 +25,7 @@ body {
 }
 
 .logo {
-  width: 50px;
+  width: 80px;
   margin-bottom: 10px;
 }
 
@@ -66,7 +66,7 @@ h1 {
 .carousel {
   display: flex;
   overflow: hidden;
-  width: 60%;
+  width: 80%;
   justify-content: center;
   align-items: center;
 }
@@ -97,4 +97,21 @@ button {
   border: none;
   padding: 10px;
   cursor: pointer;
-  position
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
