@@ -75,7 +75,7 @@ h1 {
 
 .carousel-item img {
   max-width: 60%;  /* Image size adjustment */
-  height: auto;
+  height: 400px;
   border-radius: 10px;
 }
 
