@@ -1,3 +1,4 @@
+/* Global styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #e5f2f3;
@@ -6,6 +7,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Hero Section */
 .hero {
   position: relative;
   background-image: url('https://storageforfinalproject.blob.core.windows.net/catimages/Cat1.png');
@@ -16,12 +18,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  filter: blur(8px); /* Blurs the background */
   position: relative;
+  filter: blur(8px);
 }
 
 .hero-content {
   z-index: 1;
+  color: white;
 }
 
 .logo {
@@ -56,6 +59,7 @@ h1 {
   background-color: #555;
 }
 
+/* Carousel Section */
 .carousel-container {
   margin-top: 20px;
   display: flex;
@@ -73,12 +77,12 @@ h1 {
 
 .carousel-item {
   display: none;
-  flex: 0 0 100%;
+  flex: 0 0 80%;
   text-align: center;
 }
 
 .carousel-item img {
-  max-width: 60%; /* Reduces the image size */
+  max-width: 100%; /* Reduces the image size */
   height: auto;
   border-radius: 10px;
   display: block;
@@ -89,8 +93,10 @@ h1 {
   font-size: 1.2em;
   font-style: italic;
   margin-top: 10px;
+  color: #333;
 }
 
+/* Buttons for the carousel */
 button {
   background-color: #333;
   color: white;
@@ -114,4 +120,23 @@ button:hover {
 
 .next {
   right: 10px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
+
+  .carousel-item img {
+    max-width: 90%; /* Reduce the image size more on mobile */
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .description {
+    font-size: 1em;
+  }
 }
