@@ -1,58 +1,50 @@
-/* Global styles */
+/* General Body and Hero Section */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #e5f2f3;
   color: #333;
   margin: 0;
-  overflow-x: hidden;
+  padding: 0;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
-  background-image: url('https://storageforfinalproject.blob.core.windows.net/catimages/Cat1.png');
+  background: url('https://storageforfinalproject.blob.core.windows.net/catimages/robotcatlogo.png') no-repeat center center;
   background-size: cover;
-  background-position: center;
   height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: relative;
-  filter: blur(8px);
+  color: #fff;
+  filter: blur(3px);  /* Blurred effect for background */
 }
 
 .hero-content {
-  z-index: 1;
-  color: white;
-}
-
-.logo {
-  width: 80px;
-  margin-bottom: 10px;
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  color: #fff;
 }
 
 h1 {
-  font-size: 2.5em;
-  color: white;
-  margin: 0;
+  font-size: 3em;
 }
 
 .description {
-  font-size: 1.2em;
-  color: white;
-  margin-top: 10px;
+  font-size: 1.3em;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 
 .explore-btn {
-  display: inline-block;
   background-color: #333;
   color: white;
   padding: 10px 20px;
-  margin-top: 15px;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1.1em;
+  margin-top: 20px;
+  display: inline-block;
 }
 
 .explore-btn:hover {
@@ -61,42 +53,39 @@ h1 {
 
 /* Carousel Section */
 .carousel-container {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
+  max-width: 80%;
+  margin: auto;
   position: relative;
+  text-align: center;
 }
 
 .carousel {
   display: flex;
-  overflow: hidden;
-  width: 80%;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel-item {
   display: none;
-  flex: 0 0 80%;
-  text-align: center;
+  width: 100%;
+  transition: all 0.5s ease;
 }
 
 .carousel-item img {
-  max-width: 100%; /* Reduces the image size */
+  max-width: 60%;  /* Image size adjustment */
   height: auto;
   border-radius: 10px;
-  display: block;
-  margin: 0 auto;
 }
 
 .carousel-item p {
   font-size: 1.2em;
   font-style: italic;
-  margin-top: 10px;
-  color: #333;
+  max-width: 90%;
+  margin: 15px auto;
 }
 
-/* Buttons for the carousel */
 button {
   background-color: #333;
   color: white;
@@ -108,6 +97,7 @@ button {
   transform: translateY(-50%);
   z-index: 10;
   border-radius: 50%;
+  font-size: 1.5em;
 }
 
 button:hover {
@@ -115,28 +105,9 @@ button:hover {
 }
 
 .prev {
-  left: 10px;
+  left: 10%;
 }
 
 .next {
-  right: 10px;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-  .hero {
-    height: 40vh;
-  }
-
-  .carousel-item img {
-    max-width: 90%; /* Reduce the image size more on mobile */
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  .description {
-    font-size: 1em;
-  }
+  right: 10%;
 }
