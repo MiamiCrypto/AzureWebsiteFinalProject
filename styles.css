@@ -10,7 +10,7 @@ body {
 .hero {
   position: relative;
   background: url('https://storageforfinalproject.blob.core.windows.net/catimages/robotcatlogo.png') no-repeat center center;
-  background-size: cover;
+  background-size: 25%;
   height: 50vh;
   display: flex;
   justify-content: center;
