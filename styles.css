@@ -7,44 +7,60 @@ body {
   padding: 0;
 }
 
-/* Hero Section */
 .hero {
   position: relative;
-  background: url('https://storageforfinalproject.blob.core.windows.net/catimages/robotcatlogo.png') no-repeat center center;
-  background-size: 20%;  /* Reduced size of the logo */
-  height: 40vh;  /* Reduced height of the hero section */
+  background-color: #dceaff;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
-  filter: blur(3px);  /* Blurred effect for background */
-  margin-bottom: 20px; /* Added some margin to prevent overlap */
+  overflow: hidden;
 }
 
-/* Hero Content (Title and Description) */
+.hero-logo {
+  width: 10%; /* Adjust the logo size */
+  margin-bottom: 20px;
+}
+
 .hero-content {
   position: absolute;
   z-index: 10;
-  color: #fff;
-  font-size: 1.8em;  /* Smaller font size for the title */
 }
 
 h1 {
-  font-size: 2.5em;  /* Reduced header size */
+  font-size: 3em;
+  margin: 10px;
 }
 
 .description {
-  font-size: 1.2em;  /* Reduced description size */
-  margin-top: 10px;
+  font-size: 1.3em;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+.explore-btn {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.explore-btn:hover {
+  background-color: #555;
 }
 
 /* Carousel Section */
 .carousel-container {
-  max-width: 60%;
+  max-width: 80%;
   margin: auto;
   position: relative;
   text-align: center;
+  padding-top: 20px;
 }
 
 .carousel {
@@ -55,27 +71,24 @@ h1 {
   position: relative;
 }
 
-/* Each item in the carousel */
 .carousel-item {
   display: none;
-  width: 100%;
-  transition: all 0.5s ease;
+  flex: 0 0 80%;
+  text-align: center;
 }
 
 .carousel-item img {
-  max-width: 60%;  /* Image size adjustment */
-  height: 300px;   /* Reduced image height */
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
-/* Carousel item description */
 .carousel-item p {
-  font-size: 1em;  /* Reduced font size for description */
+  font-size: 1.1em;
   font-style: italic;
-  margin: 15px auto;
+  margin-top: 15px;
 }
 
-/* Carousel buttons */
 button {
   background-color: #333;
   color: white;
@@ -94,11 +107,10 @@ button:hover {
   background-color: #555;
 }
 
-/* Left and Right Buttons */
 .prev {
-  left: 10%;
+  left: 0;
 }
 
 .next {
-  right: 10%;
+  right: 0;
 }
