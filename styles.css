@@ -26,7 +26,7 @@ body {
 }
 
 .hero-content {
-  position: relative; /* Positions the content inside the hero section */
+  position: center; /* Positions the content inside the hero section */
   z-index: 10; /* Ensures that the content is above the background */
 }
 
