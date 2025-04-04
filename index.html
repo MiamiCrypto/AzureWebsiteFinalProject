@@ -61,7 +61,8 @@
             const formData = new FormData();
             formData.append("file", document.getElementById('fileInput').files[0]);
 
-            const response = await fetch('<your-azure-function-url>', {
+            // Replace with your Azure Function URL
+            const response = await fetch('https://technokittiesuploadfunction.azurewebsites.net/api/http_trigger1?code=M12lFP0fEXampleCode', {
                 method: 'POST',
                 body: formData,
             });
@@ -72,3 +73,4 @@
     </script>
 </body>
 </html>
+
