@@ -9,7 +9,7 @@ body {
 
 .hero {
     position: relative;
-    background-color: #000000; /* Black background for the hero section */
+    background-color: #000000;
     height: 40vh;  /* Adjusted height for hero */
     display: flex;
     justify-content: center;
@@ -47,14 +47,14 @@ p {
 
 .upload-section form {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Adds space between buttons */
+    justify-content: center;  /* Ensures buttons are centered */
+    align-items: center;      /* Aligns the buttons vertically */
+    gap: 10px;                /* Adds space between the two buttons */
 }
 
 .upload-section input[type="file"] {
-    margin: 0;
     padding: 10px;
+    margin: 0;  /* Adjusts the margin to match button */
 }
 
 .upload-section button {
@@ -64,6 +64,7 @@ p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 10px;  /* Adds spacing between the file input and button */
 }
 
 .upload-section button:hover {
