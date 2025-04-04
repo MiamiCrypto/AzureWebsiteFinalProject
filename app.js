@@ -1,13 +1,16 @@
-document.getElementById('uploadForm').onsubmit = async function (event) {
-    event.preventDefault();
-    const formData = new FormData();
-    formData.append("file", document.getElementById('fileInput').files[0]);
+// For JavaScript (Node.js), you can access the secret using process.env
+const functionKey = process.env.AZURE_FUNCTION_KEY;
 
-    const response = await fetch('<your-azure-function-url>', {
-        method: 'POST',
-        body: formData,
-    });
-
-    const result = await response.json();
-    alert(result.message || "Image uploaded successfully!");
-}
+fetch('https://technokittiesuploadfunction.azurewebsites.net/api/http_trigger1?code=' + functionKey, {
+  method: 'POST',
+  body: JSON.stringify({
+    name: 'John Doe',
+    image: 'your-image'
+  }),
+  headers: {
+    'Content-Type': 'application/json',
+  },
+})
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch((error) => console.error('Error:', error));
