@@ -7,20 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Hero Section -->
     <div class="hero">
+        <img src="https://storageforfinalproject.blob.core.windows.net/catimages/technokittieslogo.png" alt="Techno Kitties Logo" class="hero-logo" />
         <div class="hero-content">
-            <img src="https://storageforfinalproject.blob.core.windows.net/catimages/technokittieslogo.png" alt="Techno Kitties Logo" class="hero-logo">
             <h1>Welcome to Techno Kitties</h1>
             <p>Where futuristic felines meet cutting-edge art.</p>
         </div>
     </div>
-    
-    <!-- Image Upload Section -->
+
+    <!-- Upload Section -->
     <div class="upload-section">
         <h2>Upload Your Robot Cat Image</h2>
         <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" id="imageInput" name="image" accept="image/png, image/jpeg" />
-            <button type="submit">Upload Image</button>
+            <input type="file" id="fileInput" name="file" accept="image/*" />
+            <button type="submit" id="uploadBtn">Upload Image</button>
         </form>
         <p id="uploadFeedback"></p>
     </div>
@@ -54,6 +55,20 @@
         <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
 
-    <script src="app.js"></script>
+    <script>
+        document.getElementById('uploadForm').onsubmit = async function (event) {
+            event.preventDefault();
+            const formData = new FormData();
+            formData.append("file", document.getElementById('fileInput').files[0]);
+
+            const response = await fetch('<your-azure-function-url>', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const result = await response.json();
+            alert(result.message || "Image uploaded successfully!");
+        }
+    </script>
 </body>
 </html>
