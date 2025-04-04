@@ -11,7 +11,7 @@ body {
 .hero {
   position: relative;
   background: url('https://storageforfinalproject.blob.core.windows.net/catimages/robotcatlogo.png') no-repeat center center; /* Background image */
-  background-size: 25%; /* Resizes the background image to 25% of its original size */
+  background-size: 10%; /* Resizes the background image to 25% of its original size */
   height: 50vh; /* Sets the height of the hero section to 50% of the viewport height */
   display: flex; /* Uses flexbox to align child elements */
   justify-content: center; /* Centers the content horizontally */
