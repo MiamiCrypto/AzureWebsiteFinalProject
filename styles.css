@@ -10,7 +10,7 @@ body {
 .hero {
   position: relative;
   background-color: #dceaff;
-  height: 50vh;
+  height: 25vh;
   display: flex;
   justify-content: center;
   align-items: center;
