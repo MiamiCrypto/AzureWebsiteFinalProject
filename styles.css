@@ -10,7 +10,7 @@ body {
 .hero {
   position: relative; /* Positions the hero section relative to other elements */
   background-color: #dceaff; /* Sets the background color of the hero section */
-  height: 50vh; /* Sets the height of the hero section to 25% of the viewport height */
+  height: 30vh; /* Sets the height of the hero section to 25% of the viewport height */
   display: center; /* Uses flexbox to align items within the hero */
   justify-content: center; /* Centers the hero content horizontally */
   align-items: center; /* Centers the hero content vertically */
@@ -20,7 +20,7 @@ body {
 }
 
 .hero-logo {
-  width: 50%; /* Adjust the logo size to 30% of the hero width */
+  width: 25%; /* Adjust the logo size to 30% of the hero width */
   margin-bottom: 20px; /* Adds space between the logo and the title */
   margin-top: 20px; /* Adds space between the top of the page and the logo */
 }
