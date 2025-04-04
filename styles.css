@@ -56,7 +56,7 @@ h1 {
 
 /* Carousel Section */
 .carousel-container {
-  max-width: 80%; /* Sets the maximum width of the carousel container to 80% of the screen */
+  max-width: 60%; /* Sets the maximum width of the carousel container to 80% of the screen */
   margin: auto; /* Centers the carousel container */
   position: relative; /* Positions the carousel container relative to the page */
   text-align: center; /* Centers the text within the carousel */
