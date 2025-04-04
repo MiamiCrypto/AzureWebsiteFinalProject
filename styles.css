@@ -10,7 +10,7 @@ body {
 .hero {
   position: relative; /* Positions the hero section relative to other elements */
   background-color: #dceaff; /* Sets the background color of the hero section */
-  height: 25vh; /* Sets the height of the hero section to 25% of the viewport height */
+  height: 50vh; /* Sets the height of the hero section to 25% of the viewport height */
   display: center; /* Uses flexbox to align items within the hero */
   justify-content: center; /* Centers the hero content horizontally */
   align-items: center; /* Centers the hero content vertically */
