@@ -1,19 +1,13 @@
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
+document.getElementById('uploadForm').onsubmit = async function (event) {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("file", document.getElementById('fileInput').files[0]);
 
-function showItem(index) {
-  // Hide all items
-  items.forEach(item => item.style.display = 'none');
-  // Show the current item
-  items[index].style.display = 'block';
+    const response = await fetch('<your-azure-function-url>', {
+        method: 'POST',
+        body: formData,
+    });
+
+    const result = await response.json();
+    alert(result.message || "Image uploaded successfully!");
 }
-
-function moveSlide(step) {
-  // Calculate the new index
-  currentIndex = (currentIndex + step + totalItems) % totalItems;
-  showItem(currentIndex);
-}
-
-// Initialize the carousel by showing the first item
-showItem(currentIndex);
