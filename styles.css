@@ -78,7 +78,7 @@ h1 {
 }
 
 .carousel-item img {
-  max-width: 100%; /* Ensures the image takes up 100% of the available width in the carousel item */
+  max-width: 60%; /* Ensures the image takes up 60% of the available width in the carousel item */
   height: auto; /* Keeps the aspect ratio of the image intact */
   border-radius: 10px; /* Rounds the corners of the images */
 }
