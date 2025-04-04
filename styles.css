@@ -20,7 +20,7 @@ body {
 }
 
 .hero-logo {
-  width: 25%; /* Adjust the logo size to 30% of the hero width */
+  width: 10%; /* Adjust the logo size to 30% of the hero width */
   margin-bottom: 20px; /* Adds space between the logo and the title */
   margin-top: 20px; /* Adds space between the top of the page and the logo */
 }
