@@ -10,7 +10,7 @@ body {
 .hero {
     position: relative;
     background-color: #000000;
-    height: 40vh;  /* Adjusted height for hero */
+    height: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@ body {
 }
 
 .hero-logo {
-    width: 20%; /* Adjust the logo size */
+    width: 20%;
     margin-bottom: 20px;
 }
 
@@ -46,26 +46,16 @@ p {
 }
 
 .upload-section form {
-    display: flex;               /* Use flexbox for side-by-side buttons */
+    display: flex;               /* Flexbox for side-by-side buttons */
     justify-content: center;     /* Center the buttons horizontally */
     align-items: center;         /* Vertically align the buttons */
-    gap: 10px;                   /* Add space between the buttons */
+    gap: 20px;                   /* Add space between the buttons */
 }
 
 .upload-section input[type="file"] {
-    display: none;               /* Hide default "Choose File" button */
-}
-
-.upload-section .custom-file-upload {
-    background-color: #333;      /* Custom button background color */
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.upload-section .custom-file-upload:hover {
-    background-color: #555;      /* Hover effect for custom button */
+    padding: 10px;
+    margin: 0;
+    width: auto;
 }
 
 .upload-section button {
@@ -75,6 +65,7 @@ p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: auto;
 }
 
 .upload-section button:hover {
