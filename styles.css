@@ -54,10 +54,10 @@ p {
     color: white;
     padding: 12px 24px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;       /* Small border-radius for square corners */
     margin-right: 10px;       /* Space between buttons */
-    border: none;             /* No border around the button */
     font-size: 1em;           /* Set a consistent font size */
+    display: inline-block;    /* Make label behave like a button */
 }
 
 .upload-button {
@@ -65,7 +65,7 @@ p {
     color: white;
     padding: 12px 24px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;       /* Keep the corners squared */
     border: none;             /* No border around the button */
     font-size: 1em;           /* Set a consistent font size */
 }
@@ -75,9 +75,17 @@ p {
     background-color: #555;   /* Darker shade for hover effect */
 }
 
-/* General Upload Section Styling */
+/* Hide default file input */
 .upload-section input[type="file"] {
-    display: none;  /* Hide the default file input, show our custom button */
+    display: none;  /* Hide the default file input */
+}
+
+/* Ensure the upload button and file input are side by side and centered */
+.upload-section form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between file input and upload button */
 }
 
 /* Gallery Section */
