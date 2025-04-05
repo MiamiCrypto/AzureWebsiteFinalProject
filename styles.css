@@ -10,7 +10,7 @@ body {
 .hero {
     position: relative;
     background-color: #000000;
-    height: 30vh;  /* Adjusted height for hero */
+    height: 40vh;  /* Adjusted height for hero */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,9 +53,19 @@ p {
 }
 
 .upload-section input[type="file"] {
-    padding: 10px;
-    margin: 0;                   /* Remove margin to align with button */
-    width: auto;                 /* Allow file input width to adjust */
+    display: none;               /* Hide default "Choose File" button */
+}
+
+.upload-section .custom-file-upload {
+    background-color: #333;      /* Custom button background color */
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.upload-section .custom-file-upload:hover {
+    background-color: #555;      /* Hover effect for custom button */
 }
 
 .upload-section button {
