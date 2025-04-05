@@ -9,7 +9,7 @@ body {
 
 .hero {
     position: relative;
-    background-color: #000000;  /* Black background */
+    background-color: #000000;
     height: 40vh;  /* Adjusted height for hero */
     display: flex;
     justify-content: center;
