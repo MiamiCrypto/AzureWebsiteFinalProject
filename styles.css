@@ -43,49 +43,32 @@ p {
 .upload-section {
     text-align: center;
     margin-top: 30px;
-    display: flex;
-    justify-content: center;  /* Center the buttons horizontally */
-    align-items: center;      /* Center the buttons vertically */
-    gap: 10px;                /* Add space between the buttons */
 }
 
-.custom-file-upload {
-    background-color: #333;   /* Dark gray for the file button */
-    color: white;
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 4px;       /* Small border-radius for square corners */
-    margin-right: 10px;       /* Space between buttons */
-    font-size: 1em;           /* Set a consistent font size */
-    display: inline-block;    /* Make label behave like a button */
-}
-
-.upload-button {
-    background-color: #008CBA; /* Blue for the upload button */
-    color: white;
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 4px;       /* Keep the corners squared */
-    border: none;             /* No border around the button */
-    font-size: 1em;           /* Set a consistent font size */
-}
-
-.custom-file-upload:hover,
-.upload-button:hover {
-    background-color: #555;   /* Darker shade for hover effect */
-}
-
-/* Hide default file input */
-.upload-section input[type="file"] {
-    display: none;  /* Hide the default file input */
-}
-
-/* Ensure the upload button and file input are side by side and centered */
 .upload-section form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px; /* Space between file input and upload button */
+    display: flex;               /* Use flexbox for side-by-side buttons */
+    justify-content: center;     /* Center the buttons horizontally */
+    align-items: center;         /* Vertically align the buttons */
+    gap: 10px;                   /* Add space between the buttons */
+}
+
+.upload-section input[type="file"] {
+    padding: 10px;
+    margin: 0;                   /* Remove margin to align with button */
+    width: auto;                 /* Allow file input width to adjust */
+}
+
+.upload-section button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-section button:hover {
+    background-color: #555;
 }
 
 /* Gallery Section */
