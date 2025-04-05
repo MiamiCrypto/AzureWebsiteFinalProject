@@ -46,7 +46,7 @@ p {
 }
 
 .upload-section form {
-    display: flex;               /* Use flexbox for side-by-side buttons */
+    display: grid;               /* Use flexbox for side-by-side buttons */
     justify-content: center;     /* Center the buttons horizontally */
     align-items: center;         /* Vertically align the buttons */
     gap: 10px;                   /* Add space between the buttons */
