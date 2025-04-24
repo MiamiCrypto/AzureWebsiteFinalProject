@@ -79,7 +79,7 @@ p {
 }
 
 .carousel-container {
-    max-width: 80%;
+    max-width: 60%; /* lowered this from 80% */
     margin: auto;
     position: relative;
     text-align: center;
@@ -96,12 +96,12 @@ p {
 
 .carousel-item {
     display: none;
-    flex: 0 0 80%;
+    flex: 0 0 60%;
     text-align: center;
 }
 
 .carousel-item img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     border-radius: 10px;
 }
