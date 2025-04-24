@@ -49,33 +49,41 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Space between buttons */
+    gap: 20px;               /* Space between Choose File and Upload Image buttons */
     flex-wrap: wrap;
 }
 
-/* Hide the actual file input */
-.upload-section input[type="file"] {
-    display: none;
-}
-
-/* Style the label as the button */
+/* Style the label as a button */
 .custom-file-upload {
     background-color: #333;
     color: white;
     padding: 10px 20px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
     text-align: center;
     height: 40px;
     line-height: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 .custom-file-upload:hover {
     background-color: #555;
 }
 
+/* Hide the actual file input and make it clickable */
+.custom-file-upload input[type="file"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+/* Upload button styling */
 .upload-section button {
     background-color: #333;
     color: white;
