@@ -59,6 +59,9 @@ p {
     width: auto;
     max-width: 200px; /* Prevents the input from being too wide */
     box-sizing: border-box; /* Ensures padding is included in width */
+    appearance: auto;             /* Reset browser styling */
+    -webkit-appearance: auto;     /* For Safari/Chrome */
+    -moz-appearance: auto;        /* For Firefox */
 }
 
 .upload-section button {
