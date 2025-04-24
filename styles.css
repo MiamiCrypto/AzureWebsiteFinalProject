@@ -49,58 +49,46 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;               /* Space between Choose File and Upload Image buttons */
+    gap: 20px;              /* Space between file input and upload button */
     flex-wrap: wrap;
 }
 
-/* Style the label as a button */
-.custom-file-upload {
+/* Style the default file input to look like a button */
+.upload-section input[type="file"] {
     background-color: white;
     color: black;
-    padding: 10px 20px;
+    border: 2px solid black;
     border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    display: inline-flex;            /* Use flex to center text like the button */
-    align-items: center;             /* Vertically center text */
-    justify-content: center;         /* Horizontally center text */
-    text-align: center;
-    height: 40px;                    /* Same height as the Upload button */
-    line-height: normal;             /* Reset line height */
-    position: relative;
-    overflow: hidden;
-    font-size: 1em;                  /* Match font size */
-    border: none;                    /* Remove border if needed for consistency */
+    height: 40px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.custom-file-upload:hover {
-    background-color: #555;
-}
-
-/* Hide the actual file input and make it clickable */
-.custom-file-upload input[type="file"] {
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
+/* Hover effect for file input */
+.upload-section input[type="file"]:hover {
+    background-color: #333;
+    color: white;
 }
 
 /* Upload button styling */
 .upload-section button {
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 10px 20px;
-    border: none;
+    border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
     height: 40px;
-    width: auto;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Hover effect for Upload Image button */
 .upload-section button:hover {
-    background-color: #555;
+    background-color: #333;
+    color: white;
 }
 
 /* Gallery Section */
