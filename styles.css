@@ -60,12 +60,16 @@ p {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    display: inline-block;
+    display: inline-flex;            /* Use flex to center text like the button */
+    align-items: center;             /* Vertically center text */
+    justify-content: center;         /* Horizontally center text */
     text-align: center;
-    height: 40px;
-    line-height: 20px;
+    height: 40px;                    /* Same height as the Upload button */
+    line-height: normal;             /* Reset line height */
     position: relative;
     overflow: hidden;
+    font-size: 1em;                  /* Match font size */
+    border: none;                    /* Remove border if needed for consistency */
 }
 
 .custom-file-upload:hover {
