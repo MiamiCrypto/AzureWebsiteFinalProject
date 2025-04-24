@@ -49,33 +49,30 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;               /* Space between file input and button */
-    flex-wrap: nowrap;       /* Keeps them side by side */
+    gap: 20px; /* Space between buttons */
+    flex-wrap: wrap;
 }
 
-/* Styling the file input to match the Upload button */
+/* Hide the actual file input */
 .upload-section input[type="file"] {
-    padding: 10px 20px;
-    margin: 0;
-    width: auto;
-    max-width: 200px;
-    box-sizing: border-box;
-    display: inline-block;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 1px solid #333;
-    border-radius: 5px;
+    display: none;
+}
+
+/* Style the label as the button */
+.custom-file-upload {
     background-color: #333;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    display: inline-block;
     text-align: center;
-    height: 40px;                 /* Match height of the Upload button */
+    height: 40px;
     line-height: 20px;
 }
 
-/* Hover effect to match the Upload button */
-.upload-section input[type="file"]:hover {
+.custom-file-upload:hover {
     background-color: #555;
 }
 
@@ -86,7 +83,7 @@ p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    height: 40px;                 /* Ensures alignment with file input */
+    height: 40px;
     width: auto;
 }
 
@@ -135,7 +132,7 @@ p {
 }
 
 /* Carousel Navigation Buttons */
-button {
+button.prev, button.next {
     background-color: #333;
     color: white;
     border: none;
@@ -149,7 +146,7 @@ button {
     font-size: 1.5em;
 }
 
-button:hover {
+button.prev:hover, button.next:hover {
     background-color: #555;
 }
 
@@ -160,5 +157,3 @@ button:hover {
 .next {
     right: 0;
 }
-
-
