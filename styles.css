@@ -46,16 +46,19 @@ p {
 }
 
 .upload-section form {
-    display: flex;               /* Flexbox for side-by-side buttons */
-    justify-content: center;     /* Center the buttons horizontally */
-    align-items: center;         /* Vertically align the buttons */
-    gap: 20px;                   /* Add space between the buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping if space is tight */
 }
 
 .upload-section input[type="file"] {
     padding: 10px;
     margin: 0;
     width: auto;
+    max-width: 200px; /* Prevents the input from being too wide */
+    box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 .upload-section button {
@@ -79,7 +82,7 @@ p {
 }
 
 .carousel-container {
-    max-width: 60%; /* lowered this from 80% */
+    max-width: 60%;
     margin: auto;
     position: relative;
     text-align: center;
@@ -112,6 +115,7 @@ p {
     margin-top: 15px;
 }
 
+/* Carousel Navigation Buttons */
 button {
     background-color: #333;
     color: white;
@@ -137,3 +141,14 @@ button:hover {
 .next {
     right: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
